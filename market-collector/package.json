@@ -1,0 +1,26 @@
+{
+  "name": "market-collector",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "nodemon -e ts,js --exec 'ts-node -r tsconfig-paths/register' ./src/index.ts"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "ext": "ts,js",
+    "delay": 2500
+  },
+  "devDependencies": {
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "nodemon": "^2.0.15",
+    "tsconfig-paths": "^3.14.1",
+    "ttypescript": "^1.5.13"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "winston-telegram": "^2.5.0"
+  }
+}

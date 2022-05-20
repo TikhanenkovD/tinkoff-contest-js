@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./built",
+    "baseUrl": "./src",
+    "paths": {
+      "@application/*": ["./application/*"],
+      "@data/*": ["./data/*"],
+      "@lib/*": ["./lib/*"],
+      "@infrastructure/*": ["./infrastructure/*"],
+      "@shared-kernel/*": ["../../shared-kernel/*"],
+      "@/*": ["./*"],
+    },
+    "plugins": [
+      {
+        "transform": "@zerollup/ts-transform-paths",
+      }
+    ]
+  },
+  "include": ["./src/**/*", "../shared-kernel/**/*"],
+}

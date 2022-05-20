@@ -1,0 +1,30 @@
+{
+  "system": {
+    "sandbox": {
+      "ordersPollingFrequencyMs": 400
+    },
+    "real": {
+      "ordersPollingFrequencyMs": 400
+    },
+    "accountId": ""
+  },
+  "trade": [
+    {
+      "instrumentFigi": "",
+      "tariffCommissionPercentage": 0.03,
+      "lotSize": 1,
+      "strategies": {
+        "SimpleStrategy": {
+          "availableMoney": 100,
+          "minimalPriceGap": 0.01
+        }
+      }
+    }
+  ],
+  "collect": [
+    {
+      "instrumentFigi": "",
+      "interval": "1m"
+    }
+  ]
+}

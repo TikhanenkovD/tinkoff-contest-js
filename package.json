@@ -1,0 +1,32 @@
+{
+  "name": "trade-ai-v3",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "trading-core",
+    "market-collector"
+  ],
+  "scripts": {
+    "core": "cd ./trading-core && yarn start",
+    "collector": "cd ./market-collector && yarn start",
+    "dev": "concurrently --kill-others \"npm run collector\" \"npm run core\"",
+    "postinstall": "cd ./node_modules/invest-nodejs-grpc-sdk && tsc && cd ../.."
+  },
+  "dependencies": {
+    "@types/amqplib": "^0.8.2",
+    "amqplib": "^0.8.0",
+    "invest-nodejs-grpc-sdk": "git+https://github.com/mtvkand/invest-nodejs-grpc-sdk.git",
+    "typescript": "^4.6.3",
+    "winston": "^3.7.2",
+    "winston-sentry": "^0.2.1"
+  },
+  "devDependencies": {
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "concurrently": "^7.1.0",
+    "eslint": "^8.13.0",
+    "eslint-plugin-import": "^2.26.0",
+    "nodemon": "^2.0.15",
+    "ttypescript": "^1.5.13"
+  }
+}

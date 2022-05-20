@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "@shared-kernel/*": ["./shared-kernel/*"],
+    },
+    "plugins": [
+      {
+          "transform": "@zerollup/ts-transform-paths",
+      }
+    ]
+  }
+}

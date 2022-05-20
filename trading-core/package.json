@@ -1,0 +1,28 @@
+{
+  "name": "trading-core",
+  "version": "0.0.1",
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "nodemon -e ts,js --exec 'ts-node -r tsconfig-paths/register' ./src/index.ts"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "docs/*"
+    ],
+    "ext": "ts,js",
+    "delay": 2500
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "@zerollup/ts-transform-paths": "^1.7.18",
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.15",
+    "ts-jest": "^27.1.4",
+    "tsconfig-paths": "^3.14.1",
+    "ttypescript": "^1.5.13"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
